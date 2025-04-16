@@ -14,12 +14,12 @@ Nós elaboramos um sistema utilizando Arduino que tem como propósito capturar a
 O sistema funciona da seguinte forma:
 
 - OK (Led Verde):
-  - Luminosidade acima de 800 (ambiente escuro/baixa iluminação)
+  - Luminosidade abaixo de 33 (ambiente escuro/baixa iluminação)
 - ALERTA (Led Amarelo):
-  - Luminosidade menor que 800 e acima de 500 (ambiente com iluminação considerável)
+  - Luminosidade menor que 66 e acima de 33 (ambiente com iluminação considerável)
   - ACIONA O PIEZO: buzina por 3 segundos, se persistir, repete a buzina
 - PERIGO (Led Vermelho):
-  - Luminosidade abaixo de 500 (ambiente com alta iluminação)
+  - Luminosidade maior de 66 (ambiente com alta iluminação)
   - ACIONA O PIEZO: buzina de forma constante até que seja corrigida a iluminação
 
 ## Tecnologias Utilizadas
@@ -39,11 +39,13 @@ Este projeto utiliza os seguintes componentes eletrônicos:
 | LED Vermelho  | 1  |
 | LED Amarelo  | 1  |
 | LED Verde  | 1  |
-| Resistor 220 Ω  | 3 |
-| Resistor 1 kΩ  | 1  |
+| Resistor 220 Ω  | 4 |
 | Fotorresistor  | 1  |
 | Piezo  | 1  |
 | Jumpers  | 14  |
+
+## Observação
+É ideal na realização desse circuito utilizar um resistor de 10kΩ ligado ao LDR, não um de 220Ω. Foi utilizado um de 220Ω pois permite maior variabilidade de valores, permitindo uma facilidade maior na hora de testar. Temos total ciência que o ideal é um resistor de 10kΩ.
 
 # Integrantes do Grupo  
 
