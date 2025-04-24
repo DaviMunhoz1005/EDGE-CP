@@ -6,6 +6,8 @@ Checkpoint 1 para a disciplina de Edge Computing and Computer Systems FIAP.
 
 A montagem completa do circuito pode ser visualizada e testada diretamente na simulação do Tinkercad.  
 > [Clique aqui para acessar a simulação.](https://www.tinkercad.com/things/j51QYpTMhE4-cp-1-edge)
+> 
+> [Clique aqui para acessar um vídeo rápido explicativo.](https://www.youtube.com/watch?v=CTHkOQF_GoQ)
 
 ## Sobre o Projeto
 
