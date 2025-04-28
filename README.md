@@ -1,27 +1,35 @@
-# EDGE-CP1
+# EDGE-CP
 
-Checkpoint 1 para a disciplina de Edge Computing and Computer Systems FIAP.
+Checkpoints para a disciplina de Edge Computing and Computer Systems FIAP.
 
 ## Esquemática e Montagem
 
 A montagem completa do circuito pode ser visualizada e testada diretamente na simulação do Tinkercad.  
-> [Clique aqui para acessar a simulação.](https://www.tinkercad.com/things/j51QYpTMhE4-cp-1-edge?sharecode=ClycW8TVkj-h1uDvxYE7v8UwEznIFJERs4fF8bX5_ok)
+> [Clique aqui para acessar a simulação no Tinkercad (Apenas a parte 1 do projeto).](https://www.tinkercad.com/things/j51QYpTMhE4-cp-1-edge?sharecode=ClycW8TVkj-h1uDvxYE7v8UwEznIFJERs4fF8bX5_ok)
+>
+> [Clique aqui para acessar a simulação no Wokwi (Parte 1 e Parte 2).](https://wokwi.com/projects/429249402028828673)
 > 
 > [Clique aqui para acessar um vídeo rápido explicativo.](https://www.youtube.com/watch?v=CTHkOQF_GoQ)
 
 ## Sobre o Projeto
 
-Nós elaboramos um sistema utilizando Arduino que tem como propósito capturar as informações de luminosidade do sistema, com o intuito de auxiliar a manter o ambiente com uma iluminação adequada para a preservação de vinhos. 
+Nós elaboramos um sistema utilizando Arduino que tem como propósito capturar as informações de luminosidade, temperatura e umidade do sistema, com o intuito de auxiliar a manter o ambiente com um estado adequado para a preservação de vinhos. 
 
 O sistema funciona da seguinte forma:
 
 - OK (Led Verde):
   - Luminosidade abaixo de 33 (ambiente escuro/baixa iluminação)
+  - Temperatura entre 10 °C e 18°C
+  - Umidade entre 60% e 70%
 - ALERTA (Led Amarelo):
   - Luminosidade menor que 66 e acima de 33 (ambiente com iluminação considerável)
+  - Temperatura entre 8 °C e 10 °C ou 18 °C à 20 °C
+  - Umidade entre 50% e 60% ou 70% e 75%
   - ACIONA O PIEZO: buzina por 3 segundos, se persistir, repete a buzina
 - PERIGO (Led Vermelho):
   - Luminosidade maior de 66 (ambiente com alta iluminação)
+  - Temperatura menor que 8 °C ou maior que 20 °C
+  - Umidade menor que 50% ou maior que 75%
   - ACIONA O PIEZO: buzina de forma constante até que seja corrigida a iluminação
 
 ## Tecnologias Utilizadas
@@ -42,12 +50,14 @@ Este projeto utiliza os seguintes componentes eletrônicos:
 | LED Amarelo  | 1  |
 | LED Verde  | 1  |
 | Resistor 220 Ω  | 4 |
+| Resistor 4,7 kΩ  | 1 |
 | Fotorresistor  | 1  |
 | Piezo  | 1  |
-| Jumpers  | 14  |
+| DHT11 ou DHT22  | 1  |
+| Jumpers  | 18  |
 
 ## Observação
-É ideal na realização desse circuito utilizar um resistor de 10kΩ ligado ao LDR, não um de 220Ω. Foi utilizado um de 220Ω pois permite maior variabilidade de valores, permitindo uma facilidade maior na hora de testar. Temos total ciência que o ideal é um resistor de 10kΩ.
+Para que o programa funcione é necessário instalar a lib chamada "DHT sensor library", ela permite a obtenção dos valores do sensor, tanto de temperatura quanto de umidade.
 
 # Integrantes do Grupo  
 
