@@ -64,6 +64,7 @@ Este projeto utiliza os seguintes componentes eletrônicos:
 
 ## Observação
 Para que o programa funcione é necessário instalar a lib chamada "DHT sensor library", ela permite a obtenção dos valores do sensor, tanto de temperatura quanto de umidade.
+Também é necessário a lib "LiquidCrystal" para manipulação do LCD 16x02.
 
 # Integrantes do Grupo  
 
