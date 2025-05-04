@@ -10,7 +10,8 @@ A montagem completa do circuito pode ser visualizada e testada diretamente na si
 > [Vídeo rápido explicativo (Apenas a parte 1 do projeto).](https://www.youtube.com/watch?v=CTHkOQF_GoQ)
 >  
 > [Simulação no Wokwi (Parte 1 e Parte 2).](https://wokwi.com/projects/429966884149495809)
-> 
+>
+> [Vídeo rápido explicativo (Parte 1 e Parte 2).](https://www.youtube.com/watch?v=D1xrjWwjxWU)
 
 
 ## Sobre o Projeto
