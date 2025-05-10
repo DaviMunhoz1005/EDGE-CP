@@ -9,7 +9,7 @@ A montagem completa do circuito pode ser visualizada e testada diretamente na si
 >
 > [Vídeo rápido explicativo (Apenas a parte 1 do projeto).](https://www.youtube.com/watch?v=CTHkOQF_GoQ)
 >  
-> [Simulação no Wokwi (Parte 1 e Parte 2).](https://wokwi.com/projects/429966884149495809)
+> [Simulação no Wokwi (Parte 1 e Parte 2).](https://wokwi.com/projects/430521461111936001)
 >
 > [Vídeo rápido explicativo (Parte 1 e Parte 2).](https://www.youtube.com/watch?v=D1xrjWwjxWU)
 
@@ -60,14 +60,14 @@ Este projeto utiliza os seguintes componentes eletrônicos:
 | Fotorresistor  | 1  |
 | Piezo  | 1  |
 | DHT11 ou DHT22  | 1  |
-| LCD 16x02  | 1  |
-| Jumpers  | 43  |
+| LCD 16x02 (I2C)  | 1  |
+| Jumpers  | 39  |
 
 ## Observação
 Para que o programa funcione é necessário instalar a lib chamada "DHT sensor library", ela permite a obtenção dos valores do sensor, tanto de temperatura quanto de umidade.
-Também é necessário a lib "LiquidCrystal" para manipulação do LCD 16x02.
+Também é necessário a lib "LiquidCrystal_I2C" para manipulação do LCD 16x02 I2C.
 
 # Integrantes do Grupo  
 
-| [<img loading="lazy" src="https://github.com/DaviMunhoz1005.png" width=115><br><sub>Davi Marques</sub>](https://github.com/DaviMunhoz1005) |  [<img loading="lazy" src="https://github.com/catvergueiro.png" width=115><br><sub>Catarina Luiza</sub>](https://github.com/catvergueiro) |  [<img loading="lazy" src="https://github.com/Gabsgc01.png" width=115><br><sub>Gabriel Ciriaco</sub>](https://github.com/Gabsgc01) | [<img loading="lazy" src="https://github.com/Mafraaa.png" width=115><br><sub>Vinicius Mafra</sub>](https://github.com/Mafraaa) | [<img loading="lazy" src="https://github.com/MariFranca.png" width=115><br><sub>Mariana Franca</sub>](https://github.com/MariFranca) | 
-| :---: | :---: | :---: | :---: | :---: |
+| [<img loading="lazy" src="https://github.com/DaviMunhoz1005.png" width=115><br><sub>Davi Marques</sub>](https://github.com/DaviMunhoz1005) |  [<img loading="lazy" src="https://github.com/Gabsgc01.png" width=115><br><sub>Gabriel Ciriaco</sub>](https://github.com/Gabsgc01) | [<img loading="lazy" src="https://github.com/Mafraaa.png" width=115><br><sub>Vinicius Mafra</sub>](https://github.com/Mafraaa) | [<img loading="lazy" src="https://github.com/MariFranca.png" width=115><br><sub>Mariana Franca</sub>](https://github.com/MariFranca) | 
+| :---: | :---: | :---: | :---: |
