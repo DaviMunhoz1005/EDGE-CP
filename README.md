@@ -45,6 +45,40 @@ O comportamento do sistema varia de acordo com as medições, acionando disposit
 >
 > [🎥 Vídeo explicativo (Partes 1 e 2)](https://www.youtube.com/watch?v=D1xrjWwjxWU)
 
+## 📸 Exemplos Visuais do Sistema em Funcionamento
+
+### ✅ Estado OK
+
+![Luminosidade OK](imgs/luminosidade/luz_ok.PNG)
+
+![Temperatura OK](imgs/temperatura/temp_ok.PNG)
+
+![Umidade OK](imgs/umidade/umi_ok.PNG)
+
+### ⚠️ Estado de Alerta
+
+![Luminosidade Moderada](imgs/luminosidade/luz_moderada.PNG)
+
+![Temperatura Moderada Baixa](imgs/temperatura/temp_mod_baixa.PNG)
+
+![Temperatura Moderada Alta](imgs/temperatura/temp_mod_alta.PNG)
+
+![Umidade Moderada Baixa](imgs/umidade/umi_mod_baixa.PNG)
+
+![Umidade Moderada Alta](imgs/umidade/umi_mod_alta.PNG)
+
+### 🚨 Estado de Perigo
+
+![Luminosidade OK](imgs/luminosidade/luz_alta.PNG)
+
+![Temperatura Alta](imgs/temperatura/temp_alta.PNG)
+
+![Temperatura Baixa](imgs/temperatura/temp_baixa.PNG)
+
+![Umidade Baixa](imgs/umidade/umi_baixa.PNG)
+
+![Umidade Alta](imgs/umidade/umi_alta.PNG)
+
 ## 🧰 Componentes Utilizados
 
 | Componente  | Quantidade |
