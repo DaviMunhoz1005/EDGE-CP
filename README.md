@@ -1,53 +1,51 @@
 # EDGE-CP
 
-Checkpoints para a disciplina de Edge Computing and Computer Systems FIAP.
+Repositório com os checkpoints desenvolvidos para a disciplina de Edge Computing and Computer Systems da FIAP.
 
-## Esquemática e Montagem
+## 🔧 Visão Geral do Projeto
 
-A montagem completa do circuito pode ser visualizada e testada diretamente na simulação do Tinkercad.  
-> [Simulação no Tinkercad (Apenas a parte 1 do projeto).](https://www.tinkercad.com/things/j51QYpTMhE4-cp-1-edge?sharecode=ClycW8TVkj-h1uDvxYE7v8UwEznIFJERs4fF8bX5_ok)
+Este projeto propõe um sistema de monitoramento ambiental utilizando Arduino, com o objetivo de preservar a qualidade do ambiente para armazenar vinhos. Através de sensores de luminosidade, temperatura e umidade, o sistema indica o estado do ambiente (OK, ALERTA ou PERIGO) por meio de LEDs, sons e exibição em um display LCD.
+
+O comportamento do sistema varia de acordo com as medições, acionando dispositivos visuais e sonoros conforme os parâmetros ambientais. 
+
+## 🧠 Lógica de Funcionamento
+
+### ✅ Estado OK
+- Luminosidade: abaixo de 33
+- Temperatura: entre 10 °C e 18 °C
+- Umidade: entre 60% e 70%
+- Ações:
+  - LED verde aceso
+  - LCD exibe os valores com indicação de ambiente ideal
+
+### ⚠️ Estado de Alerta
+- Luminosidade: entre 33 e 66
+- Temperatura: entre 8 °C e 10 °C ou entre 18 °C e 20 °C
+- Umidade: entre 50% e 60% ou entre 70% e 75%
+- Ações:
+  - LED amarelo aceso
+  - Piezo toca por 3 segundos. Se o problema persistir, repete o som.
+  - LCD destaca os valores fora do ideal
+
+### 🚨 Estado de Perigo
+- Luminosidade: acima de 66
+- Temperatura: abaixo de 8 °C ou acima de 20 °C
+- Umidade: abaixo de 50% ou acima de 75%
+- Ações:
+  - LED vermelho aceso
+  - Piezo toca continuamente enquanto houver condição de risco
+  - LCD alerta com valores em vermelho ou destaque
+ 
+## 🔬 Simulações e Demonstrações
+> [🔗 Simulação no Tinkercad (Parte 1)](https://www.tinkercad.com/things/j51QYpTMhE4-cp-1-edge?sharecode=ClycW8TVkj-h1uDvxYE7v8UwEznIFJERs4fF8bX5_ok)
 >
-> [Vídeo rápido explicativo (Apenas a parte 1 do projeto).](https://www.youtube.com/watch?v=CTHkOQF_GoQ)
->  
-> [Simulação no Wokwi (Parte 1 e Parte 2).](https://wokwi.com/projects/430521461111936001)
+> [🎥 Vídeo explicativo (Parte 1)](https://www.youtube.com/watch?v=CTHkOQF_GoQ)
 >
-> [Vídeo rápido explicativo (Parte 1 e Parte 2).](https://www.youtube.com/watch?v=D1xrjWwjxWU)
+> [🔗 Simulação no Wokwi (Partes 1 e 2)](https://wokwi.com/projects/430521461111936001)
+>
+> [🎥 Vídeo explicativo (Partes 1 e 2)](https://www.youtube.com/watch?v=D1xrjWwjxWU)
 
-
-## Sobre o Projeto
-
-Nós elaboramos um sistema utilizando Arduino que tem como propósito capturar as informações de luminosidade, temperatura e umidade do sistema, com o intuito de auxiliar a manter o ambiente com um estado adequado para a preservação de vinhos. 
-
-O sistema funciona da seguinte forma:
-
-- OK (Led Verde):
-  - Luminosidade abaixo de 33 (ambiente escuro/baixa iluminação)
-  - Temperatura entre 10 °C e 18°C
-  - Umidade entre 60% e 70%
-  - O LCD mostra os valores em OK
-- ALERTA (Led Amarelo):
-  - Luminosidade menor que 66 e acima de 33 (ambiente com iluminação considerável)
-  - Temperatura entre 8 °C e 10 °C ou 18 °C à 20 °C
-  - Umidade entre 50% e 60% ou 70% e 75%
-  - ACIONA O PIEZO: buzina por 3 segundos, se persistir, repete a buzina
-  - O LCD mostra os valores que estão Moderadamente fora do padrão
-- PERIGO (Led Vermelho):
-  - Luminosidade maior de 66 (ambiente com alta iluminação)
-  - Temperatura menor que 8 °C ou maior que 20 °C
-  - Umidade menor que 50% ou maior que 75%
-  - ACIONA O PIEZO: buzina de forma constante até que seja corrigida a iluminação
-  - O LCD mostra os valores que estão muito fora do padrão
-
-## Tecnologias Utilizadas
-
-Utilizamos as seguintes tecnologias para a simulação e para o HANDS ON:
-
-![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-
-## Como Reproduzir o Projeto?
-
-Este projeto utiliza os seguintes componentes eletrônicos:
+## 🧰 Componentes Utilizados
 
 | Componente  | Quantidade |
 | ------------- | ------------- |
@@ -63,11 +61,18 @@ Este projeto utiliza os seguintes componentes eletrônicos:
 | LCD 16x02 (I2C)  | 1  |
 | Jumpers  | 39  |
 
-## Observação
-Para que o programa funcione é necessário instalar a lib chamada "DHT sensor library", ela permite a obtenção dos valores do sensor, tanto de temperatura quanto de umidade.
-Também é necessário a lib "LiquidCrystal_I2C" para manipulação do LCD 16x02 I2C.
+## 💻 Bibliotecas Necessárias
 
-# Integrantes do Grupo  
+Para compilar e executar corretamente o projeto, é necessário instalar:
+- [DHT sensor library](https://github.com/adafruit/DHT-sensor-library) – Para leitura de temperatura e umidade.
+- [LiquidCrystal_I2C](https://github.com/johnrickman/LiquidCrystal_I2C) – Para controle do LCD via interface I2C.
+
+## 🛠️ Tecnologias
+
+![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+
+# 👥 Integrantes do Grupo  
 
 | [<img loading="lazy" src="https://github.com/DaviMunhoz1005.png" width=115><br><sub>Davi Marques</sub>](https://github.com/DaviMunhoz1005) |  [<img loading="lazy" src="https://github.com/Gabsgc01.png" width=115><br><sub>Gabriel Ciriaco</sub>](https://github.com/Gabsgc01) | [<img loading="lazy" src="https://github.com/Mafraaa.png" width=115><br><sub>Vinicius Mafra</sub>](https://github.com/Mafraaa) | [<img loading="lazy" src="https://github.com/MariFranca.png" width=115><br><sub>Mariana Franca</sub>](https://github.com/MariFranca) | 
 | :---: | :---: | :---: | :---: |
